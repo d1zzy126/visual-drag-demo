@@ -3,7 +3,7 @@ const CompressionPlugin = require('compression-webpack-plugin')
 const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
-  publicPath: isProd ? '/visual-drag-demo/' : './',
+  publicPath: './', // 使用相对路径，适配AWS Amplify部署
   lintOnSave: false, // 禁用编译时的lint检查
   configureWebpack: () => {
     if (isProd) {
