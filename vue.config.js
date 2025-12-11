@@ -4,6 +4,7 @@ const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
   publicPath: isProd ? '/visual-drag-demo/' : './',
+  lintOnSave: false, // 禁用编译时的lint检查
   configureWebpack: () => {
     if (isProd) {
       return {
